@@ -1,4 +1,5 @@
 'use client'
+import Thoughts from '@/components/thoughts/Thoughts'
 import Image from 'next/image'
 import { useEffect, useState } from 'react'
 
@@ -13,10 +14,12 @@ export default function Home() {
     }
     getAffirmation();
   },[])
-  console.log(data)
+ 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
      {data && data.data.quote}
+
+     <Thoughts/>
     </main>
   )
 }
